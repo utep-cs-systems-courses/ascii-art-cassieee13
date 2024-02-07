@@ -26,3 +26,18 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+/*Prints an arrow by utilizing the triangle and square functions*/
+void print_arrow(int leftCol, int size)
+{
+  print_triangle(leftCol, size);
+
+  int i, j;
+  int endCol = leftCol + leftCol;
+  for(int row = 0; row < leftCol; row++){
+    int col;
+    for(col = 0; col < leftCol+leftCol; col++) putchar(' ');
+    for(col = 0; col < leftCol; col++) putchar('*');
+    /* print_square(leftCol, leftCol);*/
+    putchar('\n');
+  }
+}
